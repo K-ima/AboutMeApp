@@ -13,6 +13,14 @@ class MainViewController: UIViewController {
     @IBOutlet var textFieldName: UITextField!
     @IBOutlet var textFieldPassword: UITextField!
     
+    //MARK: - Hiding the keyboard
+    override func touchesBegan(
+        _ touches: Set<UITouch>,
+        with event: UIEvent?
+    ) {
+        super.touchesBegan(touches, with: event)
+    }
+    
     //MARK: Setting Greeting Label
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let greetingVC = segue.destination as? GreetingViewController
