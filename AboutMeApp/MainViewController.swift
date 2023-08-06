@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  AboutMeApp
 //
 //  Created by Kima on 05.08.2023.
@@ -7,22 +7,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     //MARK: - Setting Outlets
     @IBOutlet var textFieldName: UITextField!
     @IBOutlet var textFieldPassword: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    
+    //MARK: Setting Greeting Label
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let greetingVC = segue.destination as? GreetingViewController
+        greetingVC?.greetingUser = "Welcome, " + (textFieldName.text ?? "") + "!"
     }
 
     //MARK: - Setting Alerts
     @IBAction func showAlertUserName() {
         let alert = UIAlertController(
             title: "Oops!",
-            message: "Your name is User",
+            message: "Your name is Alex",
             preferredStyle: .alert
         )
         let okAction = UIAlertAction(title: "OK", style: .default)
@@ -33,7 +34,7 @@ class ViewController: UIViewController {
     @IBAction func showAlertPassword() {
         let alert = UIAlertController(
             title: "Oops!",
-            message: "Your password is 111",
+            message: "Your password is 11",
             preferredStyle: .alert
         )
         let okAction = UIAlertAction(title: "OK", style: .default)
@@ -41,12 +42,6 @@ class ViewController: UIViewController {
         present(alert, animated: true)
     }
 
-    @IBAction func logInButton() {
-        if textFieldName.text != "User" || textFieldPassword.text != "111" {
-            showAlertLogIn()
-        }
-    }
-    
     private func showAlertLogIn() {
         let alert = UIAlertController(
             title: "Invalid login or password",
@@ -56,6 +51,19 @@ class ViewController: UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    // MARK: - Setting button LogIn
+    @IBAction func logInButton() {
+        if textFieldName.text != "Alex" || textFieldPassword.text != "11" {
+            showAlertLogIn()
+        }
+    }
+    
+    //MARK: - Setting button LogOut
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        textFieldName.text = ""
+        textFieldPassword.text = ""
     }
 }
 
