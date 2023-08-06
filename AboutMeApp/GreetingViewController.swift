@@ -17,6 +17,5 @@ class GreetingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         greetingUserLabel.text = greetingUser
-        buttonLogIn.layer.cornerRadius = 10
     }
 }

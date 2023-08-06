@@ -41,8 +41,9 @@ class MainViewController: UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-
-    private func showAlertLogIn() {
+    
+    // MARK: - Setting buttons
+    @IBAction func logInButton() {
         let alert = UIAlertController(
             title: "Invalid login or password",
             message: "Please, enter correct login or password",
@@ -50,17 +51,12 @@ class MainViewController: UIViewController {
         )
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    
-    // MARK: - Setting button LogIn
-    @IBAction func logInButton() {
+        
         if textFieldName.text != "Alex" || textFieldPassword.text != "11" {
-            showAlertLogIn()
+            present(alert, animated: true)
         }
     }
     
-    //MARK: - Setting button LogOut
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         textFieldName.text = ""
         textFieldPassword.text = ""
