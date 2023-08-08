@@ -16,7 +16,12 @@ final class LoginViewController: UIViewController {
     private let nameUser = "Alex"
     private let passwordUser = "11"
     
-    //MARK: - Hiding the keyboard
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textFieldName.text = nameUser
+        textFieldPassword.text = passwordUser
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)

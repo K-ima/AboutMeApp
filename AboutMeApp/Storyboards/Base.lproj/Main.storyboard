@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -37,7 +38,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Log in"/>
                                                 <connections>
-                                                    <segue destination="joc-Ab-59k" kind="presentation" modalPresentationStyle="fullScreen" id="FYr-Nu-42t"/>
+                                                    <segue destination="eFy-5g-gFR" kind="presentation" modalPresentationStyle="fullScreen" id="FYr-Nu-42t"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -83,9 +84,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116.25" y="3.1690140845070425"/>
+            <point key="canvasLocation" x="163" y="2"/>
         </scene>
-        <!--Greeting View Controller-->
+        <!--Home-->
         <scene sceneID="c2a-Cc-7H3">
             <objects>
                 <viewController id="joc-Ab-59k" customClass="GreetingViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -94,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAq-7C-4tU">
-                                <rect key="frame" x="126.5" y="416" width="67" height="36"/>
+                                <rect key="frame" x="126.5" y="367" width="67" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67" id="j0f-w7-Jfk"/>
                                 </constraints>
@@ -133,18 +134,54 @@
                             <constraint firstItem="VAq-7C-4tU" firstAttribute="centerX" secondItem="PUT-Ot-0u8" secondAttribute="centerX" id="zI1-xC-2lB"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="0I9-1M-4NB"/>
                     <connections>
-                        <outlet property="buttonLogOut" destination="VAq-7C-4tU" id="Iia-yf-5XH"/>
                         <outlet property="greetingUserLabel" destination="bOk-j5-7eL" id="yvs-JK-CNo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PL8-2E-dFW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ZeV-M3-Ziy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="889.3129770992366" y="2.8169014084507045"/>
+            <point key="canvasLocation" x="889" y="802"/>
+        </scene>
+        <!--Alex-->
+        <scene sceneID="kkd-WC-v8O">
+            <objects>
+                <viewController id="BUs-rI-OvW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xOt-on-8nG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="83M-4r-TEy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Alex" image="person" catalog="system" id="vge-Rl-6Or"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iu2-Ta-UDK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1646" y="802"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LLj-H8-a6X">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eFy-5g-gFR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NPR-RZ-3oc">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="joc-Ab-59k" kind="relationship" relationship="viewControllers" id="M40-Xg-ycY"/>
+                        <segue destination="BUs-rI-OvW" kind="relationship" relationship="viewControllers" id="jIr-7q-Jtm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3t-8z-JCQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.75" y="2.112676056338028"/>
         </scene>
     </scenes>
     <resources>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
