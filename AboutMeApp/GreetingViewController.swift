@@ -7,10 +7,10 @@
 
 import UIKit
 
-class GreetingViewController: UIViewController {
+final class GreetingViewController: UIViewController {
 
     @IBOutlet var greetingUserLabel: UILabel!
-    @IBOutlet var buttonLogIn: UIButton!
+    @IBOutlet var buttonLogOut: UIButton!
     
     var greetingUser: String!
 
