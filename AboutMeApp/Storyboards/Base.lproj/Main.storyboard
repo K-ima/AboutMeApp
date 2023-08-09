@@ -143,6 +143,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="0I9-1M-4NB"/>
                     <connections>
                         <outlet property="greetingUserLabel" destination="SQX-wi-pju" id="3Th-rN-bpf"/>
+                        <outlet property="welcomeUserLabel" destination="Ice-pj-rwt" id="aAt-tD-tF7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PL8-2E-dFW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -196,7 +197,13 @@
                             <constraint firstItem="Uqx-CJ-3iO" firstAttribute="top" secondItem="83M-4r-TEy" secondAttribute="top" constant="160" id="IC5-fF-MCy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9XE-vJ-TA2"/>
+                    <navigationItem key="navigationItem" id="9XE-vJ-TA2">
+                        <barButtonItem key="rightBarButtonItem" title="Bio" id="dzY-GY-91f">
+                            <connections>
+                                <segue destination="78V-um-8Hz" kind="show" id="PcS-vn-YEG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="labelFamily" destination="Z6V-Me-uB9" id="fuf-Ig-I3S"/>
                         <outlet property="labelName" destination="105-zg-Mgd" id="7JK-Xh-xnT"/>
@@ -207,6 +214,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iu2-Ta-UDK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2404" y="802"/>
+        </scene>
+        <!--Bio View Controller-->
+        <scene sceneID="42c-cn-mXk">
+            <objects>
+                <viewController id="78V-um-8Hz" customClass="BioViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dcN-rY-NNK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVA-Ug-X9e">
+                                <rect key="frame" x="16" y="112.5" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XQ3-ES-Q2F"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XQ3-ES-Q2F" firstAttribute="trailing" secondItem="pVA-Ug-X9e" secondAttribute="trailing" constant="16" id="2fo-1f-hhF"/>
+                            <constraint firstItem="pVA-Ug-X9e" firstAttribute="leading" secondItem="XQ3-ES-Q2F" secondAttribute="leading" constant="16" id="a4F-wL-EjK"/>
+                            <constraint firstItem="pVA-Ug-X9e" firstAttribute="top" secondItem="XQ3-ES-Q2F" secondAttribute="top" constant="20" id="bBv-8V-zkH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rO1-tC-npg"/>
+                    <connections>
+                        <outlet property="textBiographyLabel" destination="pVA-Ug-X9e" id="Qom-Ek-30k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TY7-SB-v7v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3214" y="802"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="LLj-H8-a6X">

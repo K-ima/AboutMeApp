@@ -17,6 +17,7 @@
 		3B6F815E2A7E129C0036BEB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6F815D2A7E129C0036BEB4 /* Assets.xcassets */; };
 		3B6F81612A7E129C0036BEB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B6F815F2A7E129C0036BEB4 /* LaunchScreen.storyboard */; };
 		3B6F81692A7F92EC0036BEB4 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6F81682A7F92EC0036BEB4 /* GreetingViewController.swift */; };
+		3B9FADD42A837F8000E9D139 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FADD32A837F8000E9D139 /* BioViewController.swift */; };
 		3BAC4C1B2A82BDEB00239097 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC4C1A2A82BDEB00239097 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		3B6F81602A7E129C0036BEB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B6F81622A7E129C0036BEB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B6F81682A7F92EC0036BEB4 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
+		3B9FADD32A837F8000E9D139 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		3BAC4C1A2A82BDEB00239097 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +56,7 @@
 				3B372AED2A83675E00E48A78 /* TabBarViewController.swift */,
 				3B6F81682A7F92EC0036BEB4 /* GreetingViewController.swift */,
 				3BAC4C1A2A82BDEB00239097 /* InfoViewController.swift */,
+				3B9FADD32A837F8000E9D139 /* BioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				3B084D482A825232003407B4 /* Users.swift in Sources */,
 				3B6F81572A7E129B0036BEB4 /* SceneDelegate.swift in Sources */,
 				3B6F81692A7F92EC0036BEB4 /* GreetingViewController.swift in Sources */,
+				3B9FADD42A837F8000E9D139 /* BioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

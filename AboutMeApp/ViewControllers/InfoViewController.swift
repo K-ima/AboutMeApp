@@ -31,6 +31,8 @@ class InfoViewController: UIViewController {
     var familyUser: String!
     var workUser: String!
     var positionUser: String!
+    var biographyUser: String!
+    var titleBioVC: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,4 +42,11 @@ class InfoViewController: UIViewController {
         labelPosition.text = positionUser
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let bioVC = segue.destination as? BioViewController
+        bioVC?.textBiography = biographyUser
+        bioVC?.title = titleBioVC
+    }
 }
+

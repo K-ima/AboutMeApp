@@ -28,12 +28,13 @@ final class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
-    //MARK: Setting Greeting Label
+    //MARK: Setting Greeting and Info Labels
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarController = segue.destination as? UITabBarController
         tabBarController?.viewControllers?.forEach { viewController in
             if let homeVC = viewController as? GreetingViewController {
-                homeVC.greetingUser = "My name is \(users.person.fullName)"
+                homeVC.greetingUser = "My name is \(users.person.fullName)."
+                homeVC.welcomeUser = "Welcome, \(nameUser)!"
             } else if let navigationVC = viewController as? UINavigationController {
                 let infoVC = navigationVC.topViewController as? InfoViewController
                 infoVC?.title = users.person.fullName
@@ -41,6 +42,8 @@ final class LoginViewController: UIViewController {
                 infoVC?.familyUser = "Фамилия: \(users.person.family)"
                 infoVC?.workUser = "Компания: \(users.person.work)"
                 infoVC?.positionUser = "Должность: \(users.person.position)"
+                infoVC?.biographyUser = users.person.biography
+                infoVC?.titleBioVC = "\(users.person.fullName) Bio"
             }
         }
     }
