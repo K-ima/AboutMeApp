@@ -12,6 +12,6 @@ struct Person {
     let position: String
     let biography: String
     var fullName: String {
-        name + family
+        name + " " + family
     }
 }

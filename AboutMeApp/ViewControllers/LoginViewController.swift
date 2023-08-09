@@ -15,6 +15,7 @@ final class LoginViewController: UIViewController {
     
     private let nameUser = "Alex"
     private let passwordUser = "11"
+    private let users = User.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +30,21 @@ final class LoginViewController: UIViewController {
     
     //MARK: Setting Greeting Label
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let greetingVC = segue.destination as? GreetingViewController
-        greetingVC?.greetingUser = "Welcome, \(nameUser)!"
+        let tabBarController = segue.destination as? UITabBarController
+        tabBarController?.viewControllers?.forEach { viewController in
+            if let homeVC = viewController as? GreetingViewController {
+                homeVC.greetingUser = "My name is \(users.person.fullName)"
+            } else if let navigationVC = viewController as? UINavigationController {
+                let infoVC = navigationVC.topViewController as? InfoViewController
+                infoVC?.title = users.person.fullName
+                infoVC?.nameUser = "Имя: \(users.person.name)"
+                infoVC?.familyUser = "Фамилия: \(users.person.family)"
+                infoVC?.workUser = "Компания: \(users.person.work)"
+                infoVC?.positionUser = "Должность: \(users.person.position)"
+            }
+        }
     }
-
+    
     //MARK: - Setting Alerts
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
