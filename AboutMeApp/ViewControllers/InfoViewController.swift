@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {
+final class InfoViewController: UIViewController {
 
     @IBOutlet var labelName: UILabel!
     @IBOutlet var labelFamily: UILabel!
@@ -40,7 +40,10 @@ class InfoViewController: UIViewController {
         labelFamily.text = familyUser
         labelWork.text = workUser
         labelPosition.text = positionUser
-        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+        view.addVerticalGradientLayer(
+            topColor: primaryColor,
+            bottomColor: secondaryColor
+        )
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

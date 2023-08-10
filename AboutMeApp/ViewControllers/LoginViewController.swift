@@ -28,7 +28,7 @@ final class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
-    //MARK: Setting Greeting and Info Labels
+    //MARK: Setting GreetingVC and InfoVC Labels
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarController = segue.destination as? UITabBarController
         tabBarController?.viewControllers?.forEach { viewController in

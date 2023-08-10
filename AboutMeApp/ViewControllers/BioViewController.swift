@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BioViewController: UIViewController {
+final class BioViewController: UIViewController {
     
     @IBOutlet var textBiographyLabel: UILabel!
     
@@ -29,6 +29,9 @@ class BioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textBiographyLabel.text = textBiography
-        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+        view.addVerticalGradientLayer(
+            topColor: primaryColor,
+            bottomColor: secondaryColor
+        )
     }
 }

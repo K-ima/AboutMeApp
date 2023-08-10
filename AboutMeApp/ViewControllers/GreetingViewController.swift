@@ -10,7 +10,7 @@ import UIKit
 final class GreetingViewController: UIViewController {
 
     @IBOutlet var greetingUserLabel: UILabel!
-    @IBOutlet var welcomeUserLabel: UILabel!
+    @IBOutlet var presentUserLabel: UILabel!
     
     private let primaryColor = UIColor(
         red: 200/255,
@@ -31,7 +31,7 @@ final class GreetingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         greetingUserLabel.text = greetingUser
-        welcomeUserLabel.text = welcomeUser
+        presentUserLabel.text = welcomeUser
         view.addVerticalGradientLayer(
             topColor: primaryColor,
             bottomColor: secondaryColor
